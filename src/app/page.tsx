@@ -1,3 +1,4 @@
+import CategoryProduct from "@/components/categoryproduct";
 import EditorPick from "@/components/editorpick";
 import Hero from "@/components/hero";
 import ShowItems from "@/components/show_items";
@@ -9,8 +10,9 @@ export default function Home() {
    
    <Hero/>
    <ShowItems/>
-   <div className=" py-[60px] px-[180px] bg-[#D1D5DB]">
+   <div className=" py-[20px] md:py-[60px]  px-[30px] md:px-[120px]  lg:px-[180px] bg-[#D1D5DB]">
    <EditorPick/>
+   <CategoryProduct/>
    </div>
    </>
   );

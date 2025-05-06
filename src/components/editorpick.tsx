@@ -6,7 +6,7 @@ import { IoMdAdd } from "react-icons/io"
 import { FaRegStar } from "react-icons/fa"
 
 // Reusable star rating component that maintains original styling
-const StarRating = ({ size = 16 }) => (
+export const StarRating = ({ size = 16 }) => (
   <div className="flex items-center">
     {[1, 2, 3, 4, 5].map((_, index) => (
       <FaRegStar key={index} color="#FACC15" size={size} />
@@ -15,7 +15,7 @@ const StarRating = ({ size = 16 }) => (
 )
 
 // Reusable countdown component that maintains original styling
-const Countdown = ({ startValue = 87 }) => (
+export const Countdown = ({ startValue = 87 }) => (
   <div className="flex items-center gap-1">
     {[startValue, 36, 57].map((item, index) => (
       <div

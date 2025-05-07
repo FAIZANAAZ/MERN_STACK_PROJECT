@@ -4,7 +4,6 @@ import { IoMdAdd } from 'react-icons/io'
 import { FaRegStar } from 'react-icons/fa'
 import { CiHeart } from 'react-icons/ci'
 import Image from 'next/image'
-import { GiThreeLeaves } from 'react-icons/gi'
 import { Countdown, StarRating } from './editorpick'
 
 
@@ -14,49 +13,49 @@ const products = [
       size: "64 oz Bottle",
       price: 0.50,
       originalPrice: 1.99,
-      image: "/bseller1", // Image name updated
+      image: "/best1.png", // Image name updated
     },
     {
       name: "Simply Orange Pulp Free Juice",
       size: "59 oz",
       price: 2.45,
       originalPrice: 3.49,
-      image: "/bseller2", // Image name updated
+      image: "/best2.png", // Image name updated
     },
     {
       name: "Real Plant-Powered Protein Shake",
       size: "Double Chocolate",
       price: 14.89,
       originalPrice: 17.99,
-      image: "/bseller3", // Image name updated
+      image: "/best3.png", // Image name updated
     },
     {
       name: "Absolut Grapefruit Paloma Sparkling Vodka Cocktail",
       size: "9oz Can",
       price: 6.99,
       originalPrice: 8.49,
-      image: "/bseller4", // Image name updated
+      image: "/best4.png", // Image name updated
     },
     {
       name: "Vitamineral Zero Sugar",
       size: "4 Bottle Pack",
       price: 4.89,
       originalPrice: 5.89,
-      image: "/bseller5", // Image name updated
+      image: "/best5.png", // Image name updated
     },
     {
       name: "Vitamineral Zero Sugar",
       size: "12 Bottle Pack",
       price: 9.49,
       originalPrice: 11.99,
-      image: "/bseller6", // Image name updated
+      image: "/best3.png", // Image name updated
     },
   ];
   
 
 const BestSeller = () => {
   return (
-    <div className='space-y-4 w-full max-w-[1400px] mx-auto px-4 md:px-6'>
+    <div className='space-y-4 w-full mx-w-[1400px] mx-auto px-4 md:px-6'>
        {/* top section - preserved exactly as original */}
        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
         <div className="flex flex-col sm:flex-row sm:items-center bg-[#D1D5DB] w-full p-2 sm:p-0">
@@ -69,13 +68,13 @@ const BestSeller = () => {
       </div>
 
       {/* grid section - preserved layout but made responsive */}
-      <div className='flex'>
+      <div className='flex gap-3'>
         <div>
         <SameCards start={0} end={3} />
         </div>
        
-       <div>
-        <div className="bg-white border-2 h-full border-[red] md:row-span-2 p-[15px] space-y-[28px]">
+       
+        <div className="bg-white border-2  border-[red] md:row-span-2 p-[15px] gap-[28px] w-[30%]">
                   <div className="">
                     <div className="flex justify-between items-center">
                       <Button className="bg-red-700 text-white font-bold p-2 text-[10px]">76.99$</Button>
@@ -83,20 +82,20 @@ const BestSeller = () => {
                     </div>
                     <div className="flex justify-center">
                       <Image
-                        src="/grid1.png"
+                        src="/best5.png"
                         alt="list1"
                         width={340}
                         height={340}
                         className="object-contain h-[150px] w-auto"
                       />
                     </div>
-                    <div className="flex justify-between gap-4 items-center">
+                    <div className="flex justify-between gap-5 items-center">
                 
                     </div>
                   </div>
         
                   {/* buttom div */}
-                  <div className="mt-4">
+                  <div className="mt-4 flex flex-col gap-5">
                     <StarRating />
                     <div className="space-y-2">
                       <h3 className="text-black text-[14px] font-semibold">Absolut Grapefruit Paloma Sparkling Vodka Cocktail –
@@ -113,10 +112,10 @@ torquent Vivamus adipiscing nisl ut dolor dignissim semper.
                     </div>
                     
         
-                    <div className="border-t-2 gap-2 border-[#D1D5DB] pt-2">
+                    <div className="border-t-2  border-[#D1D5DB] pt-2 flex flex-col gap-5">
                       <p className="text-[12px] text-[#949ba7] font-normal">This product is about to run out</p>
                       <div className="h-[4px] w-full bg-gradient-to-r from-yellow-500 to-orange-600"></div>
-                      <div className="flex gap-2 items-center">
+                      <div className="flex gap-3 items-center">
                         <p className="text-[12px] text-[#949ba7] font-normal">available only:</p>
                         <span className="text-black">38</span>
                       </div>
@@ -126,7 +125,7 @@ torquent Vivamus adipiscing nisl ut dolor dignissim semper.
                     </div>
                   </div>
                 </div>
-       </div>
+      
 
 
 
@@ -145,7 +144,7 @@ const SameCards: React.FC<{ start: number; end: number }> = ({ start, end }) => 
     
       
     return (
-        <div className=''>
+        <div className='border-1 border-[#afb7c2] rounded-lg w-full'>
         {
             products.slice(start, end).map((product, index) =>(
                 <>

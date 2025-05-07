@@ -1,3 +1,4 @@
+import Banner2 from "@/components/banner2";
 import Banners1 from "@/components/banners";
 import BestSeller from "@/components/bestseler";
 import CategoryProduct from "@/components/categoryproduct";
@@ -19,6 +20,7 @@ export default function Home() {
    <MultiCards/>
    <Banners1/>
    <BestSeller/>
+   <Banner2/>
    </div>
    </>
   );
